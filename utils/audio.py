@@ -3,9 +3,11 @@ import os
 import subprocess
 import torchaudio
 from tempfile import NamedTemporaryFile
-
+import torch
 def load_audio(path):
-    sound, _ = torchaudio.load(path, normalization=True)
+    sound, _ = torchaudio.load(path)
+    sound = sound / torch.max(torch.abs(sound))  # Normalize manually if needed
+
     sound = sound.numpy().T
     if len(sound.shape) > 1:
         if sound.shape[1] == 1:
