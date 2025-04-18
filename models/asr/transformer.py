@@ -128,7 +128,7 @@ class Encoder(nn.Module):
     Encoder Transformer class
     """
 
-    def __init__(self, num_layers, num_heads, dim_model, dim_key, dim_value, dim_input, dim_inner, dropout=0.1, src_max_length=2500):
+    def __init__(self, num_layers, num_heads, dim_model, dim_key, dim_value, dim_input, dim_inner, dropout=0.1, src_max_length=1000):
         super(Encoder, self).__init__()
 
         self.dim_input = dim_input
