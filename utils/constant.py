@@ -58,11 +58,11 @@ parser.add_argument('--dim-input', default=161, type=int, help='Input dimension'
 parser.add_argument('--dim-inner', default=1024, type=int, help='Inner dimension')
 parser.add_argument('--dim-emb', default=512, type=int, help='Embedding dimension')
 
-parser.add_argument('--src-max-len', default=2000, type=int, help='Source max length')
+parser.add_argument('--src-max-len', default=1000, type=int, help='Source max length')
 parser.add_argument('--tgt-max-len', default=1000, type=int, help='Target max length')
 
 # Noam optimizer
-parser.add_argument('--warmup', default=4000, type=int, help='Warmup')
+parser.add_argument('--warmup', default=10000, type=int, help='Warmup')
 parser.add_argument('--min-lr', default=1e-5, type=float, help='min lr')
 parser.add_argument('--k-lr', default=1, type=float, help='factor lr')
 
