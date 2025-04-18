@@ -148,7 +148,7 @@ class Encoder(nn.Module):
         self.input_linear = nn.Linear(dim_input, dim_model)
         self.layer_norm_input = nn.LayerNorm(dim_model)
         self.positional_encoding = PositionalEncoding(
-            dim_model, src_max_length)
+            dim_model, 1000)
 
         self.layers = nn.ModuleList([
             EncoderLayer(num_heads, dim_model, dim_inner, dim_key, dim_value, dropout=dropout) for _ in range(num_layers)
